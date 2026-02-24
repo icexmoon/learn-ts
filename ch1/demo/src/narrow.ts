@@ -12,19 +12,19 @@ console.log(concatStr("hello", "world"))
 
 // null
 
-function printAll(strs: string | string[] | null) {
-    if (typeof strs === "object") {
-        for (const str of strs) { // 这里会报错——“strs”可能为“null”
-            console.log(str)
-        }
-    }
-    else if (typeof strs === "string") {
-        console.log(strs)
-    }
-    else {
-        // 你可能期望这里是 null
-    }
-}
+// function printAll(strs: string | string[] | null) {
+//     if (typeof strs === "object") {
+//         for (const str of strs) { // 这里会报错——“strs”可能为“null”
+//             console.log(str)
+//         }
+//     }
+//     else if (typeof strs === "string") {
+//         console.log(strs)
+//     }
+//     else {
+//         // 你可能期望这里是 null
+//     }
+// }
 
 // 真值缩小
 
@@ -261,8 +261,8 @@ function getArea5(shape: Shape3) {
         case "square":
             return shape.sideLength ** 2;
         default:
-            const _exhaustiveCheck: never = shape;
+            // const _exhaustiveCheck: never = shape;
             // 这里会报错，不能将类型“Triangle”分配给类型“never”。
-            return _exhaustiveCheck;
+            // return _exhaustiveCheck;
     }
 }
